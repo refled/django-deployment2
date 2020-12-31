@@ -1,0 +1,16 @@
+h1{
+color:blue;
+}
+h2{
+color:red;
+}
+
+/* .djangotwo{
+table
+  border:2px solid black
+} */
+
+table, th,td{
+   border:2px solid black
+
+}

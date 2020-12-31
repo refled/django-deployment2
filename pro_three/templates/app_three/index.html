@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>MTV - Level two</title>
+    <link rel="stylesheet" href="{% static "css/my_style.css"%}"/>
+  </head>
+  <body>
+    <h1> Welcome Django level two and MTV connection </h1>
+    <h2> Here are your access records and signup please</h1>
+
+
+      <div class="djangotwo">
+        {% if AccessRecord %}
+        <table>
+          <thead>
+            <th>Site Name </th>
+
+            <th> Date Accessed </th>
+        </thead>
+
+{% for acc in AccessRecord %}
+<tr>
+  <td>{{ acc.name}}</td>
+  <td>{{acc.date}} </td>
+</tr>
+ {% endfor%}
+</table>
+
+{% else%}
+<p> NO ACCESS records found!</p>
+
+{% endif %}
+
+</div>
+  </body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- Old  -->
+<!-- {% load static %}
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>"Concrete printing page"</title>
+    <link rel="stylesheet" href="{%static "css/my_style.css" %}"/>
+  </head>
+
+  <<h1>This page is about 3d concrete printing</h1>
+  {{start_writing_here}}
+  <body>
+
+<img src="{% static "images/3dprint.jpeg" %}" alt="No picture">
+
+  </body>
+</html> -->
